@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "risk-averse-tuning"
+version = "0.1.0"
+description = "Risk-averse hyperparameter selection for momentum optimizers (RA-GMM, Can et al. 2025)"
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "numpy>=1.24",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["risk_averse_tuning*"]
